@@ -7,8 +7,12 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 const port = 5000;
-
-app.use(cors());
+// CORS Configuration
+const corsOptions = {
+    origin: 'https://hasinimiryala.netlify.app/', // Replace with your frontend URL, e.g., Netlify URL
+    optionsSuccessStatus: 200, // For legacy browser support
+};
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 // Create the transporter using environment variables

@@ -3,8 +3,7 @@ import Work from './components/Work';  // Ensure this file exists
 import Skills from './components/Skills';      // Ensure this file exists
 import Contact from './components/Contact';    // Ensure this file exists
 import Footer from './components/Footer';      // Ensure this file exists 
-import Head from './components/Head';
-import Fade from 'react-reveal/Fade';
+import Head from './components/Head'; 
 import Home from './components/Home';
  
 import Blog from './components/Blog';
@@ -23,10 +22,9 @@ function App() {
     <div className="App"> 
     <Home/>
      <Head/>
-      <main> 
-      <Fade>
+      <main>  
          <About />
-      </Fade>
+   
         <Skills />
         <Work />
         <Blog/>
