@@ -1,0 +1,107 @@
+.about {
+  background-color: #def2f3; /* Light background similar to the reference */
+ 
+  text-align: center;        /* Center align the content */
+  color: #111010;               /* Text color */
+  
+}
+
+@keyframes moveLeftToCenter {
+  0% {
+    transform: translateX(-500%); /* Start completely off-screen to the left */
+    opacity: 0; /* Text is hidden at the start */
+  }
+  50% {
+    opacity: 1; /* Text becomes visible */
+  }
+  100% {
+    transform: translateX(0); /* Move to its original position (centered) */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+.about h2 {
+  font-size: 40px;           /* Large heading size */
+  margin-bottom: 20px;       /* Space below the heading */
+  color: #020005;               /* Darker color for heading */
+  font-weight: 700;          /* Bold heading */
+  display: inline-block; /* Keep the text inline while allowing transformation */
+    
+  transform: translateX(-50%); 
+}
+.about.visible h2
+{animation: moveLeftToCenter 1s ease-in-out forwards; /* 2 seconds animation duration */
+}
+
+.about-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grid layout */
+  gap: 100px; /* Spacing between the points */
+  margin-top: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  
+}
+/* 
+.about-points.visible {
+  animation: moveLeftToCenter 3s ease-in-out forwards; 
+} */
+
+.point{
+  background-color: #74bbd1; /* White background for the points */
+ 
+  border-radius: 10px; /* Rounded corners for a clean look */
+  box-shadow: 4px 4px 8px rgba(2, 16, 59, 1); /* Subtle shadow for depth */
+  transition: transform 2s ease; /* Smooth hover effect */
+
+  display: inline-block; /* Keep the text inline while allowing transformation */
+  
+  opacity: 0; 
+}
+.about.visible .point {
+  opacity: 1; /* Show the points when visible */
+}
+
+
+.about.visible .point:nth-child(1) {
+   animation: moveLeftToCenter 2.5s ease-in-out forwards;
+}
+
+.about.visible .point:nth-child(2) {
+   animation: moveLeftToCenter 2s ease-in-out forwards;
+}
+
+.about.visible .point:nth-child(3) {
+   animation: moveLeftToCenter 1.5s ease-in-out forwards;
+}
+
+.about.visible .point:nth-child(4) {
+   animation: moveLeftToCenter 1s ease-in-out forwards;
+}
+
+.point:hover {
+  transform: translateY(-15px); /* Lift the point on hover */
+}
+
+.point h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #1b096d;
+}
+
+.point p { 
+  
+  color: #050101;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+@media (min-width: 200px) {
+  .about {
+    padding: 50px 0px 150px;
+  }
+
+  
+}
+
+ 

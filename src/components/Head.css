@@ -1,0 +1,53 @@
+ 
+.nav-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+  background-color: rgba(0, 0, 0, 0.7);  /* Semi-transparent background */
+  z-index: 100;
+  opacity: 0;               /* Initially hidden */
+  transform: translateY(-20px); /* Initially moved up */
+  transition: opacity 1s ease, transform 1s ease;  /* Smooth fade and slide */
+}
+
+/* When visible, fade in the nav bar */
+.nav-bar.visible {
+  opacity: 1;
+  transform: translateY(0);  /* Slide to the original position */
+}
+
+/* When hidden, make sure it's invisible */
+.nav-bar.hidden {
+  opacity: 0;
+  transform: translateY(-20px);  /* Move up to make the transition smooth */
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  margin-right: 20px;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #eeedf7;
+  font-size: 1.25em;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #0992ee;
+}
+
+/* Active link styling */
+.nav-links a.active {
+  color: #0992ee;
+  font-weight: bold;
+}

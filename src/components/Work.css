@@ -1,0 +1,27 @@
+/* src/components/Work.css */
+.work {
+    padding: 100px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  
+  .work h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .work-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .work-item {
+    background-color: #282c34;
+    color: white;
+    padding: 40px;
+    width: 200px;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
