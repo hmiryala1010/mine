@@ -6,12 +6,13 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
 const app = express();
-const port = 5000;
+const port = 5001;
 // CORS Configuration
 const corsOptions = {
-    origin: 'https://hasinimiryala.netlify.app/', // Replace with your frontend URL, e.g., Netlify URL
-    optionsSuccessStatus: 200, // For legacy browser support
+    origin: ['http://localhost:3000', 'https://hasinimiryala.netlify.app/'], // Allow both local and deployed URLs
+    optionsSuccessStatus: 200,
 };
+
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
